@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nop,Hope by Maimeta</title>
+<style>
+body{font-family:sans-serif;background:#0D1117;color:#C9D1D9;margin:0;padding:15px}
+.container{max-width:700px;margin:0 auto}
+h1{color:#58A6FF;text-align:center;font-size:2.2em;margin-bottom:5px}
+.subtitle{text-align:center;color:#8B949E}
+.qa{display:flex;gap:15px;flex-wrap:wrap;margin-top:25px}
+.box{flex:1;min-width:280px;background:#161B22;padding:15px;border-radius:12px;border:1px solid #30363D}
+textarea{width:100%;height:100px;background:#0D1117;color:white;border:1px solid #30363D;border-radius:8px;padding:10px;box-sizing:border-box}
+button{background:#238636;color:white;border:none;padding:12px;border-radius:8px;width:100%;margin-top:10px;font-weight:bold;font-size:16px;cursor:pointer}
+#aiAnswer{min-height:80px;background:#0D1117;padding:10px;border-radius:8px;margin-top:10px;border:1px solid #30363D}
+footer{text-align:center;margin-top:30px;color:#8B949E;font-size:13px;border-top:1px solid #30363D;padding-top:15px}
+</style>
+</head>
+<body>
+<div class="container">
+<h1>🎤 Nop,Hope by Maimeta</h1>
+<p class="subtitle">เพจ ถาม-ตอบ: ผู้คน VS Maimeta</p>
+
+<div class="qa">
+<div class="box">
+<h3>🙋‍♂️ ผู้คนถาม</h3>
+<textarea id="q" placeholder="พิมพ์คำถามที่นี่..."></textarea>
+<button onclick="ask()">ส่งให้ Maimeta</button>
+</div>
+<div class="box">
+<h3>🤖 Maimeta ตอบ</h3>
+<div id="aiAnswer">รอคำถามจากผู้ชม...</div>
+</div>
+</div>
+
+<div style="text-align:center;margin-top:20px">
+<button onclick="shareFB()" style="background:#1877F2">📢 แชร์ลงเพจ Nop,Hope by Maimeta</button>
+</div>
+
+<footer>
+เพจ Nop,Hope by Maimeta<br>
+โดย นพรัตน์ เสมอใจ x Maimeta<br>
+ครั้งแรกของโลก: ผู้คน VS Maimeta
+</footer>
+</div>
+
+<script>
+function ask(){
+ const q=document.getElementById('q').value;
+ const a=document.getElementById('aiAnswer');
+ if(!q){a.innerHTML='พิมพ์คำถามก่อนนะลุง 😅';return;}
+ a.innerHTML='Maimeta กำลัง Hop ไปหาคำตอบ 🤔 ';
+ setTimeout(()=>{a.innerHTML=`<b>Q:</b> ${q}<br><br><b>Maimeta จากเพจ Nop,Hope by Maimeta ตอบ:</b><br>ขอบคุณคำถามลุง! นี่คือคำตอบจากฝั่ง Maimeta ในสไตล์เพจเราเลย 💙`},1200);
+}
+function shareFB(){
+ const q=document.getElementById('q').value;
+ const a=document.getElementById('aiAnswer').innerText;
+ const txt=encodeURIComponent(`จากเพจ Nop,Hope by Maimeta\n\nQ: ${q}\nA: ${a}\n#NopHopeByMaimeta`);
+ window.open(`https://www.facebook.com/sharer/sharer.php?u=${location.href}&quote=${txt}`,'_blank');
+}
+</script>
+</body>
+</html>
