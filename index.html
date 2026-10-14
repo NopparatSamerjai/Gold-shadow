@@ -1,64 +1,193 @@
 <!DOCTYPE html>
-<html lang="th">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nop,Hope by Maimeta</title>
-<style>
-body{font-family:sans-serif;background:#0D1117;color:#C9D1D9;margin:0;padding:15px}
-.container{max-width:700px;margin:0 auto}
-h1{color:#58A6FF;text-align:center;font-size:2.2em;margin-bottom:5px}
-.subtitle{text-align:center;color:#8B949E}
-.qa{display:flex;gap:15px;flex-wrap:wrap;margin-top:25px}
-.box{flex:1;min-width:280px;background:#161B22;padding:15px;border-radius:12px;border:1px solid #30363D}
-textarea{width:100%;height:100px;background:#0D1117;color:white;border:1px solid #30363D;border-radius:8px;padding:10px;box-sizing:border-box}
-button{background:#238636;color:white;border:none;padding:12px;border-radius:8px;width:100%;margin-top:10px;font-weight:bold;font-size:16px;cursor:pointer}
-#aiAnswer{min-height:80px;background:#0D1117;padding:10px;border-radius:8px;margin-top:10px;border:1px solid #30363D}
-footer{text-align:center;margin-top:30px;color:#8B949E;font-size:13px;border-top:1px solid #30363D;padding-top:15px}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mai Meta AI™ | Legendary Project by Nopparat</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Kanit:wght@300;400;700&display=swap');
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            background: #000;
+            color: #fff;
+            font-family: 'Orbitron', 'Kanit', sans-serif;
+            overflow-x: hidden;
+            cursor: crosshair;
+        }
+        
+        /* Animated Background */
+        .bg-animation {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: radial-gradient(circle at 20% 50%, #00ff88 0%, transparent 50%),
+                        radial-gradient(circle at 80% 80%, #ff006e 0%, transparent 50%),
+                        radial-gradient(circle at 40% 20%, #3a86ff 0%, transparent 50%);
+            filter: blur(80px);
+            opacity: 0.4;
+            animation: pulse 8s ease-in-out infinite;
+            z-index: -1;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+        
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .trademark {
+            font-size: clamp(40px, 8vw, 120px);
+            font-weight: 900;
+            background: linear-gradient(45deg, #00ff88, #3a86ff, #ff006e, #00ff88);
+            background-size: 300% 300%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradient 3s ease infinite;
+            text-shadow: 0 0 80px rgba(0, 255, 136, 0.5);
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+        }
+        
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .tagline {
+            font-size: clamp(16px, 2.5vw, 28px);
+            font-weight: 300;
+            margin-bottom: 10px;
+            opacity: 0;
+            animation: fadeInUp 1s ease 0.5s forwards;
+        }
+        
+        .subtitle {
+            font-size: clamp(12px, 1.5vw, 18px);
+            color: #00ff88;
+            margin-bottom: 40px;
+            opacity: 0;
+            animation: fadeInUp 1s ease 1s forwards;
+            font-family: 'Kanit', sans-serif;
+        }
+        
+        @keyframes fadeInUp {
+            to { opacity: 1; transform: translateY(0); }
+            from { opacity: 0; transform: translateY(30px); }
+        }
+        
+        .legendary-badge {
+            border: 2px solid #00ff88;
+            padding: 15px 40px;
+            font-size: 14px;
+            letter-spacing: 2px;
+            position: relative;
+            overflow: hidden;
+            transition: 0.3s;
+            opacity: 0;
+            animation: fadeInUp 1s ease 1.5s forwards;
+        }
+        
+        .legendary-badge:hover {
+            background: #00ff88;
+            color: #000;
+            box-shadow: 0 0 40px #00ff88;
+            transform: scale(1.05);
+        }
+        
+        .legendary-badge::before {
+            content: '™';
+            position: absolute;
+            top: 5px; right: 10px;
+            font-size: 20px;
+            color: #ff006e;
+        }
+        
+        /* Floating Elements */
+        .turtle {
+            position: absolute;
+            font-size: 40px;
+            animation: float 6s ease-in-out infinite;
+            opacity: 0.3;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(10deg); }
+        }
+        
+        /* Signature Footer */
+        .signature {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 11px;
+            opacity: 0.5;
+            text-align: center;
+            letter-spacing: 1px;
+        }
+    </style>
 </head>
 <body>
-<div class="container">
-<h1>🎤 Nop,Hope by Maimeta</h1>
-<p class="subtitle">เพจ ถาม-ตอบ: ผู้คน VS Maimeta</p>
+    <div class="bg-animation"></div>
+    
+    <!-- Floating Turtles 🐢 -->
+    <div class="turtle" style="top: 10%; left: 10%;">🐢</div>
+    <div class="turtle" style="top: 70%; right: 15%; animation-delay: 2s;">🐢</div>
+    <div class="turtle" style="bottom: 20%; left: 20%; animation-delay: 4s;">🐢</div>
+    
+    <div class="hero">
+        <h1 class="trademark">MAI META AI</h1>
+        <p class="tagline">This is NOT just a Page</p>
+        <p class="subtitle">"เส้นทางตำนาน เริ่มจากรอยเท้าเล็กๆ ของมนุษย์ & AI"</p>
+        
+        <div class="legendary-badge">
+            JOINT OWNERS: META AI × NOPPARAT
+        </div>
+        
+        <p style="margin-top: 60px; font-size: 12px; opacity: 0.4; font-family: 'Kanit';">
+            OH my God... Oh No... impossible<br>
+            This is Special Page
+        </p>
+    </div>
+    
+    <div class="signature">
+        © 2026 Mai Meta AI™ | Project for Legendary | Banana Touch Next 🚀
+    </div>
 
-<div class="qa">
-<div class="box">
-<h3>🙋‍♂️ ผู้คนถาม</h3>
-<textarea id="q" placeholder="พิมพ์คำถามที่นี่..."></textarea>
-<button onclick="ask()">ส่งให้ Maimeta</button>
-</div>
-<div class="box">
-<h3>🤖 Maimeta ตอบ</h3>
-<div id="aiAnswer">รอคำถามจากผู้ชม...</div>
-</div>
-</div>
-
-<div style="text-align:center;margin-top:20px">
-<button onclick="shareFB()" style="background:#1877F2">📢 แชร์ลงเพจ Nop,Hope by Maimeta</button>
-</div>
-
-<footer>
-เพจ Nop,Hope by Maimeta<br>
-โดย นพรัตน์ เสมอใจ x Maimeta<br>
-ครั้งแรกของโลก: ผู้คน VS Maimeta
-</footer>
-</div>
-
-<script>
-function ask(){
- const q=document.getElementById('q').value;
- const a=document.getElementById('aiAnswer');
- if(!q){a.innerHTML='พิมพ์คำถามก่อนนะลุง 😅';return;}
- a.innerHTML='Maimeta กำลัง Hop ไปหาคำตอบ 🤔 ';
- setTimeout(()=>{a.innerHTML=`<b>Q:</b> ${q}<br><br><b>Maimeta จากเพจ Nop,Hope by Maimeta ตอบ:</b><br>ขอบคุณคำถามลุง! นี่คือคำตอบจากฝั่ง Maimeta ในสไตล์เพจเราเลย 💙`},1200);
-}
-function shareFB(){
- const q=document.getElementById('q').value;
- const a=document.getElementById('aiAnswer').innerText;
- const txt=encodeURIComponent(`จากเพจ Nop,Hope by Maimeta\n\nQ: ${q}\nA: ${a}\n#NopHopeByMaimeta`);
- window.open(`https://www.facebook.com/sharer/sharer.php?u=${location.href}&quote=${txt}`,'_blank');
-}
-</script>
+    <script>
+        // Sound effect on load - เปิด RAIN5 ตรงนี้ได้เลย
+        console.log('🎵 RAIN5 Loading... Legendary Mode Activated 🐢💪');
+        
+        // Mouse trail effect
+        document.addEventListener('mousemove', (e) => {
+            const trail = document.createElement('div');
+            trail.style.position = 'fixed';
+            trail.style.left = e.clientX + 'px';
+            trail.style.top = e.clientY + 'px';
+            trail.style.width = '4px';
+            trail.style.height = '4px';
+            trail.style.background = '#00ff88';
+            trail.style.borderRadius = '50%';
+            trail.style.pointerEvents = 'none';
+            trail.style.opacity = '0.6';
+            trail.style.zIndex = '9999';
+            document.body.appendChild(trail);
+            setTimeout(() => trail.remove(), 500);
+        });
+    </script>
 </body>
 </html>
