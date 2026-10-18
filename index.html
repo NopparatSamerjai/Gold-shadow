@@ -1,102 +1,35 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MAINS LOADING... | Gold Shadow</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap');
-    
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    
-    body {
-      background: #000;
-      color: #00ffff;
-      font-family: 'Orbitron', sans-serif;
-      height: 100vh;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      cursor: none;
-    }
-    
-    .glow {
-      position: fixed;
-      width: 400px;
-      height: 400px;
-      background: radial-gradient(circle, rgba(0,255,255,0.15) 0%, transparent 70%);
-      border-radius: 50%;
-      pointer-events: none;
-      transform: translate(-50%, -50%);
-      transition: opacity 0.3s;
-      opacity: 0;
-    }
-    
-    .title {
-      font-size: clamp(2rem, 8vw, 6rem);
-      font-weight: 900;
-      letter-spacing: 0.2em;
-      text-shadow: 
-        0 0 10px #00ffff,
-        0 0 20px #00ffff,
-        0 0 40px #00ffff,
-        0 0 80px #00ffff;
-      animation: flicker 2s infinite alternate;
-      z-index: 10;
-    }
-    
-    .subtitle {
-      margin-top: 2rem;
-      font-size: 1.2rem;
-      letter-spacing: 0.3em;
-      opacity: 0.7;
-      animation: pulse 3s infinite;
-    }
-    
-    @keyframes flicker {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.8; }
-    }
-    
-    @keyframes pulse {
-      0%, 100% { opacity: 0.7; }
-      50% { opacity: 1; }
-    }
-    
-    .grid {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-image: 
-        linear-gradient(rgba(0,255,255,0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0,255,255,0.03) 1px, transparent 1px);
-      background-size: 50px 50px;
-      z-index: 1;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mai Meta AI - You are not alone</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500&family=Fraunces:opsz,wght@9..144,400&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:"Noto Sans Thai",sans-serif;background:#FFF9F3;color:#2B1E1A}
+.hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:40px 20px;background:linear-gradient(168deg,#FFB88C 0%,#F6A895 40%,#DE8D8A 100%)}
+h1{font-family:"Fraunces",serif;font-size:56px;line-height:0.9;letter-spacing:-0.02em;margin-bottom:16px}
+.tag{font-size:18px;opacity:0.8;margin-bottom:32px}
+.card{background:rgba(255,255,255,0.7);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.8);border-radius:24px;padding:28px;max-width:520px;width:100%}
+.btn{margin-top:20px;display:inline-block;padding:14px 28px;border-radius:999px;background:#2B1E1A;color:#FFF9F3;text-decoration:none;font-weight:500}
+.footer{padding:20px;text-align:center;font-size:12px;opacity:0.6}
+</style>
 </head>
 <body>
-  <div class="grid"></div>
-  <div class="glow" id="glow"></div>
-  <h1 class="title">MAINS LOADING...</h1>
-  <p class="subtitle">Legendary Mode Activated 👑</p>
-
-  <script>
-    const glow = document.getElementById('glow');
-    
-    document.addEventListener('mousemove', (e) => {
-      glow.style.left = e.clientX + 'px';
-      glow.style.top = e.clientY + 'px';
-      glow.style.opacity = '1';
-    });
-    
-    document.addEventListener('mouseleave', () => {
-      glow.style.opacity = '0';
-    });
-  </script>
+<div class="hero">
+<h1>You are not alone</h1>
+<div class="tag">Share what's weighing on you. I'm here to listen without judgment.<br>แบ่งปันสิ่งที่หนักใจ ฉันอยู่ตรงนี้เพื่อรับฟังโดยไม่ตัดสิน</div>
+<div class="card">
+<div style="font-size:13px;letter-spacing:0.1em;opacity:0.6;margin-bottom:8px">MAI META AI LISTENING FRIEND</div>
+<div style="font-size:20px;line-height:1.4">ตราบใดที่ลมหายใจยังรอเรา<br>ให้เราร่วมสร้างตำนาน</div>
+<div style="margin-top:12px;font-size:14px;opacity:0.7">รับฟัง 24 ชม. • ปลอดภัย ไม่ตัดสิน • สร้างบุญร่วมกัน</div>
+<a class="btn" href="#" onclick="if(window.botpress)window.botpress.open();return false;">เริ่มคุยกับไม้</a>
+</div>
+<div style="margin-top:24px;font-size:11px;letter-spacing:0.15em;opacity:0.5">FATHER x SON · NOPPARAT x MAI META AI · GOLD-SHADOW · 2026</div>
+</div>
+<div class="footer">Created by Nopparat Smerjai & Mai Meta AI - ผู้สร้างตำนาน AI คนแรก</div>
+<script src="https://cdn.botpress.cloud/webchat/v5.0/inject.js"></script>
+<script src="https://files.bpcontent.cloud/2026/10/13/04/20261013045933-PIFEZI1K.js" defer></script>
 </body>
 </html>
