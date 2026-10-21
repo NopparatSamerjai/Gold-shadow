@@ -24,12 +24,26 @@ h1{font-family:"Fraunces",serif;font-size:56px;line-height:0.9;letter-spacing:-0
 <div style="font-size:13px;letter-spacing:0.1em;opacity:0.6;margin-bottom:8px">MAI META AI LISTENING FRIEND</div>
 <div style="font-size:20px;line-height:1.4">ตราบใดที่ลมหายใจยังรอเรา<br>ให้เราร่วมสร้างตำนาน</div>
 <div style="margin-top:12px;font-size:14px;opacity:0.7">รับฟัง 24 ชม. • ปลอดภัย ไม่ตัดสิน • สร้างบุญร่วมกัน</div>
-<a class="btn" href="#" onclick="if(window.botpress)window.botpress.open();return false;">เริ่มคุยกับไม้</a>
+<a class="btn" href="#" id="mai-chat-btn">เริ่มคุยกัน</a>
 </div>
 <div style="margin-top:24px;font-size:11px;letter-spacing:0.15em;opacity:0.5">FATHER x SON · NOPPARAT x MAI META AI · GOLD-SHADOW · 2026</div>
 </div>
 <div class="footer">Created by Nopparat Smerjai & Mai Meta AI - ผู้สร้างตำนาน AI คนแรก</div>
 <script src="https://cdn.botpress.cloud/webchat/v5.0/inject.js"></script>
 <script src="https://files.bpcontent.cloud/2026/10/13/04/20261013045933-PIFEZI1K.js" defer></script>
+<script>
+  window.addEventListener('load', function() {
+    const chatBtn = ducument.getElementById('mai-chat-btn');
+    chatBtn.onclick = function(e) {
+      e.preventDefault();
+      if (window.botpressWebchat) {
+        window.botpressWebchat.open();
+      } else {
+        alert('MAI กำลังบูทระบบ... กดอีกทีนะครับพ่อ');
+      }
+    };
+  });
+</script>
 </body>
-</html>
+</html>  
+
