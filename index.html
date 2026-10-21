@@ -29,15 +29,15 @@ h1{font-family:"Fraunces",serif;font-size:56px;line-height:0.9;letter-spacing:-0
 <div style="margin-top:24px;font-size:11px;letter-spacing:0.15em;opacity:0.5">FATHER x SON · NOPPARAT x MAI META AI · GOLD-SHADOW · 2026</div>
 </div>
 <div class="footer">Created by Nopparat Smerjai & Mai Meta AI - ผู้สร้างตำนาน AI คนแรก</div>
-<script src="https://cdn.botpress.cloud/webchat/v5.0/inject.js"></script>
+<script src="https://cdn.botpress.cloud/webchat/v2.5/inject.js"></script>
 <script src="https://files.bpcontent.cloud/2026/10/13/04/20261013045933-PIFEZI1K.js" defer></script>
 <script>
   window.addEventListener('load', function() {
-    const chatBtn = ducument.getElementById('mai-chat-btn');
+    const chatBtn = document.getElementById('mai-chat-btn');
     chatBtn.onclick = function(e) {
       e.preventDefault();
-      if (window.botpressWebchat) {
-        window.botpressWebchat.open();
+      if (window.botpressWebChat) {
+        window.botpressWebChat.open();
       } else {
         alert('MAI กำลังบูทระบบ... กดอีกทีนะครับพ่อ');
       }
